@@ -1,0 +1,13 @@
+Power Analysis Wilcoxon Mann Whitney
+------------------------------------
+
+proc power;
+  twosamplewilcoxon
+    vardist("cohort2")=ordinal((1 2 3 4): (0.25 0.25 0.25 0.25)
+    vardist("cohort1")=ordinal((1 2 3 4): (0.70 0.10 0.10 0.10)
+    variables="cohort2"|"cohoort1"
+    sides=u
+    ntotal=120 45
+    power=.;
+   plot step=10;
+  run;
